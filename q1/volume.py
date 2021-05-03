@@ -1,10 +1,14 @@
 def calc_volume(a):
+    volume = 0
+        
     try:
         length = float(a)
     except ValueError:
-        return "Enter a number."
+        raise ValueError("Enter a number")
 
     if(length <= 0):
-        return "Enter a positive number greather than zero."
+        return "Enter a number greather than zero."
     else:
-        return length * length * length
+        volume = length * length * length
+    
+    return round(volume, 2)
